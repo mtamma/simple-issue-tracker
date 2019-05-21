@@ -23,9 +23,6 @@
         "priority": {
             "type": "string"
         },
-        "status": {
-            "type": "string"
-        },
         "comment": {
             "type": [
                 "string"
