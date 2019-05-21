@@ -1,1 +1,67 @@
-{"name":"Issue","base":"PersistedModel","idInjection":true,"options":{"validateUpsert":true},"properties":{"prefix_code":{"type":"string"},"title":{"type":"string","required":true},"type":{"type":"string"},"priority":{"type":"string"},"status":{"type":"string"},"comment":{"type":["string"]},"created_by":{"type":"string"},"created_at":{"type":"date"},"updated_at":{"type":"date"},"updated_by":{"type":"string"}},"validations":[],"relations":{},"acls":[],"methods":{}}
+{
+    "name": "Issue",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "prefix_code": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "string",
+            "required": true
+        },
+        "type": {
+            "type": "string"
+        },
+        "priority": {
+            "type": "string"
+        },
+        "comment": {
+            "type": [
+                "string"
+            ]
+        },
+        "created_by": {
+            "type": "string"
+        },
+        "created_at": {
+            "type": "date"
+        },
+        "updated_at": {
+            "type": "date"
+        },
+        "updated_by": {
+            "type": "string"
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [
+        {
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "DENY"
+        },
+        {
+            "accessType": "READ",
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "ALLOW"
+        },
+        {
+            "accessType": "WRITE",
+            "principalType": "ROLE",
+            "principalId": "$authenticated",
+            "permission": "ALLOW"
+        }
+    ],
+    "methods": {}
+}
