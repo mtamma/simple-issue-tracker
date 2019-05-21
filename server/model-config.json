@@ -14,7 +14,8 @@
         ]
     },
     "User": {
-        "dataSource": "mongoDatasource"
+        "dataSource": "mongoDatasource",
+        "public": false
     },
     "AccessToken": {
         "dataSource": "mongoDatasource",
@@ -40,6 +41,10 @@
         "public": true
     },
     "Status": {
+        "dataSource": "mongoDatasource",
+        "public": true
+    },
+    "Member": {
         "dataSource": "mongoDatasource",
         "public": true
     }
